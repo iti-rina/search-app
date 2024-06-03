@@ -1,21 +1,10 @@
-import { ListItem } from "./ListItem";
+import { USER_LIST } from "./data";
+import { List } from "./List";
 
 export const App = () => {
-  const [activeElement, setActiveElement] = useState(0);
-
   return (
     <div>
-      <ul>
-        {(usersList || [{}]).map((user, index) => (
-          <ListItem
-            key={index}
-            user={{ ...user, active: activeElement === index }}
-            onSetActiveClick={() => {
-              setActiveElement(index);
-            }}
-          />
-        ))}
-      </ul>
+      <List users={USER_LIST} />
     </div>
   );
 }
