@@ -18,8 +18,7 @@ export const App = () => {
   return (
     <div>
       <SearchBar query={query} onChange={handleChangeQuery}/>
-      {filteredUsers.length >}
-      <List users={filteredUsers} />
+      {filteredUsers.length >= 1 ? <List users={filteredUsers} /> : <></>}
     </div>
   );
 }
