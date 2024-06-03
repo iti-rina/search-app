@@ -1,7 +1,7 @@
 export const SearchBar = ({ query, onChange }) => {
   return (
     <form className="grow ml-3 h-9">
-      <label for="searchBar" className="hidden">Search:</label>
+      <label htmlFor="searchBar" className="hidden">Search:</label>
       <input 
         id="searchBar"
         placeholder="Search..."
