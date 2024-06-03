@@ -16,7 +16,7 @@ export const App = () => {
   }
 
   return (
-    <div className="w-1/5 mt-14 flex flex-col gap-3">
+    <div className="my-0 mx-auto w-1/5 mt-14 flex flex-col gap-3">
       <SearchBar query={query} onChange={handleChangeQuery}/>
       {filteredUsers.length >= 1 ? <List users={filteredUsers} /> : <></>}
     </div>
