@@ -11,7 +11,7 @@ const usersList = [
   { name: "Catherine Martinez" },
 ];
 
-function App() {
+export const App = () => {
   const [activeElement, setActiveElement] = useState(0);
 
   return (
@@ -31,7 +31,7 @@ function App() {
   );
 }
 
-const ListItem = ({ user, onSetActiveClick }) => {
+export const ListItem = ({ user, onSetActiveClick }) => {
   return (
     <li>
       {user.name} {user.active && "(active)"}
@@ -40,13 +40,13 @@ const ListItem = ({ user, onSetActiveClick }) => {
   );
 };
 
-const Button = ({ text, onClick }) => {
+export const Button = ({ text, onClick }) => {
   console.log("button rerender");
 
   return <button onClick={onClick}>{text}</button>;
 };
 
-const rootElement = document.getElementById("root")!;
+const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(<App />);
