@@ -14,7 +14,7 @@ export const App = () => {
   if (query) {
     filteredUsers = findAllOccurrences(USER_LIST, query);
   }
-
+  
   return (
     <div className="my-0 mx-auto w-1/5 mt-14 flex flex-col gap-3">
       <SearchBar query={query} onChange={handleChangeQuery}/>
