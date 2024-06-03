@@ -7,8 +7,10 @@ export const ListItem = ({ user, isActive, handleActivate }) => {
     name = highlight(user.name, user.highlight, user.hightlightLen);
   }
 
+  let isActiveClass = isActive ? 'flex items-center space-x-3 before:inline-block before:size-2 before:bg-green before:rounded-full before:mr-1' : 'ml-3 space-x-3';
+
   return (
-    <li>
+    <li className={isActiveClass}>
       <span>{name}</span>
       {!isActive ? <Button text="set active" onClick={handleActivate} /> : <></>}
     </li>
